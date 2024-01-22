@@ -24,6 +24,7 @@ A website showcasing Marias photography 📸
 - React 18
 - Tailwind
 - TypeScript
+- React Icons
 
 ## Getting Started In Your Local Environment
 
