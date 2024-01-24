@@ -3,8 +3,8 @@ import NavItems from './NavItems';
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-black text-white p-6">
-      <div className="flex items-center flex-shrink-0 mr-6">
+    <nav className="flex justify-between flex-wrap bg-black text-white p-6">
+      <div className="flex mr-6">
         <span className="font-semibold text-xl tracking-tight">
           Maria&apos;s Moments
         </span>
