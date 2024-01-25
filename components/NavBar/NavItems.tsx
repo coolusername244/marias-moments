@@ -23,7 +23,7 @@ const NavItems: FC<NavItemsProps> = ({ navLinksShownHandler }) => {
           <a
             onClick={navLinksShownHandler}
             href="#"
-            className="text-white text-2xl lg:text-lg"
+            className="text-white font-medium tracking-widest text-2xl lg:text-lg"
           >
             {item.name}
           </a>

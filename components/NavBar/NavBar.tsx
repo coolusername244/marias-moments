@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <nav className="flex justify-between flex-wrap bg-black text-white p-6">
       <div className="flex mr-6">
-        <span className="font-semibold text-xl tracking-tight">
+        <span className="font-semibold text-2xl tracking-wide">
           Maria&apos;s Moments
         </span>
       </div>
