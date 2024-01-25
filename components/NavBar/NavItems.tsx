@@ -1,6 +1,10 @@
 'use client';
-import React from 'react';
+import React, { FC } from 'react';
 import { NavigationItem } from '@/types';
+
+type NavItemsProps = {
+  navLinksShownHandler: () => void;
+};
 
 const navigation: NavigationItem[] = [
   { name: 'Gallery', href: '#' },
@@ -8,7 +12,7 @@ const navigation: NavigationItem[] = [
   { name: 'Contact', href: '#' },
 ];
 
-const NavItems = () => {
+const NavItems: FC<NavItemsProps> = ({ navLinksShownHandler }) => {
   return (
     <div className="h-[80vh] flex flex-col lg:inline-block justify-center lg:h-fit lg:flex-end">
       {navigation.map((item, i) => (
@@ -16,7 +20,11 @@ const NavItems = () => {
           key={i}
           className="flex items-center justify-center h-[20%] lg:inline-block lg:mt-0 lg:ml-12 lg:mr-2"
         >
-          <a href="#" className="text-white text-2xl lg:text-lg">
+          <a
+            onClick={navLinksShownHandler}
+            href="#"
+            className="text-white text-2xl lg:text-lg"
+          >
             {item.name}
           </a>
         </span>

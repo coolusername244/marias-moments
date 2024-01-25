@@ -1,7 +1,14 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import NavItems from './NavItems';
 
 const NavBar = () => {
+  const [navLinksShown, setNavLinksShown] = useState<boolean>(false);
+
+  const navLinksShownHandler = () => {
+    setNavLinksShown(false);
+  };
+
   return (
     <nav className="flex justify-between flex-wrap bg-black text-white p-6">
       <div className="flex mr-6">
@@ -10,7 +17,12 @@ const NavBar = () => {
         </span>
       </div>
       <div className="block lg:hidden">
-        <button className="flex">
+        <button
+          className="flex"
+          onClick={() => {
+            setNavLinksShown(!navLinksShown);
+          }}
+        >
           <svg
             className="fill-current h-5 w-5"
             viewBox="0 0 20 20"
@@ -21,8 +33,12 @@ const NavBar = () => {
           </svg>
         </button>
       </div>
-      <div className="w-full lg:flex lg:items-center lg:w-auto">
-        <NavItems />
+      <div
+        className={`${
+          navLinksShown ? 'inline' : 'hidden'
+        } w-full lg:flex lg:items-center lg:w-auto`}
+      >
+        <NavItems navLinksShownHandler={navLinksShownHandler} />
       </div>
     </nav>
   );
