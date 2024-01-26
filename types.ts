@@ -5,4 +5,5 @@ export type NavigationItem = {
 
 export type SocialIcon = {
   name: JSX.Element;
+  href: string;
 };
