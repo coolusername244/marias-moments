@@ -1,12 +1,7 @@
 import React from 'react';
-import NavBar from '@/components/NavBar/NavBar';
 
 const Main = () => {
-  return (
-    <main className="h-screen bg-neutral-900">
-      <NavBar />
-    </main>
-  );
+  return <main>Home</main>;
 };
 
 export default Main;
