@@ -12,9 +12,9 @@ const NavBar = () => {
   return (
     <nav className="flex justify-between flex-wrap bg-black text-white p-6">
       <div className="flex mr-6">
-        <span className="font-semibold text-2xl tracking-wide">
+        <a href="/" className="text-2xl tracking-widest">
           Maria&apos;s Moments
-        </span>
+        </a>
       </div>
       <div className="block lg:hidden">
         <button
