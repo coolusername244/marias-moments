@@ -7,9 +7,9 @@ type NavItemsProps = {
 };
 
 const navigation: NavigationItem[] = [
-  { name: 'Gallery', href: '#' },
-  { name: 'About', href: '#' },
-  { name: 'Contact', href: '#' },
+  { name: 'Gallery', href: '/gallery' },
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
 ];
 
 const NavItems: FC<NavItemsProps> = ({ navLinksShownHandler }) => {
@@ -22,7 +22,7 @@ const NavItems: FC<NavItemsProps> = ({ navLinksShownHandler }) => {
         >
           <a
             onClick={navLinksShownHandler}
-            href="#"
+            href={item.href}
             className="text-white font-medium tracking-widest text-2xl lg:text-lg"
           >
             {item.name}
